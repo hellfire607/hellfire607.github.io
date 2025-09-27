@@ -1,110 +1,169 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
 }
 
-.hero {
-  background: #1d2a38;
-  color: #fff;
-  padding: 40px 20px;
+/* Header */
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 15px 30px;
+  background: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.hero-text h1 {
-  margin: 0;
-  font-size: 2em;
+.main-header .logo {
+  display: flex;
+  align-items: center;
 }
 
-.hero-text p {
-  margin-top: 10px;
-  font-size: 1.2em;
+.main-header .logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.main-header h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #ff4747;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #ff4747, #ff7f50);
+  color: white;
+}
+
+.hero-text {
+  max-width: 50%;
 }
 
 .hero-image img {
-  width: 100px;
+  width: 150px;
 }
 
-.services {
-  padding: 40px 20px;
-}
-
-.services h2 {
-  margin-bottom: 20px;
-}
-
+/* Cards */
 .cards {
   display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
-  background: #f9f9f9;
+  background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
 }
 
-.card h3 {
-  margin-top: 0;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.card span {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.how {
-  padding: 40px 20px;
-  background: #f5f5f5;
-}
-
+/* Steps */
 .steps {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
 .steps div {
   text-align: center;
 }
 
-.steps img {
-  width: 40px;
-  margin-bottom: 10px;
-}
-
-.contact {
-  padding: 40px 20px;
-}
-
+/* Buttons */
 .buttons a {
   display: inline-block;
   margin: 10px;
-  padding: 12px 25px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  color: #fff;
+  transition: 0.3s;
 }
 
-.whatsapp { background: #25D366; }
-.discord { background: #5865F2; }
-.paypal { background: #0070ba; }
+.buttons .whatsapp { background: #25D366; }
+.buttons .discord { background: #5865F2; }
+.buttons .paypal { background: #0070BA; }
 
+.buttons a:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
 footer {
-  padding: 20px;
-  background: #1d2a38;
-  color: #fff;
-  margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Animations */
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+.animate-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.2s forwards;
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1.2s forwards;
+}
+
+.animate-zoom {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

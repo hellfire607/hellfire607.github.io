@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&components=hosted-buttons&disable-funding=venmo&currency=USD">
-</script>
+<head>
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&components=hosted-buttons&disable-funding=venmo&currency=USD">
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,66 +11,80 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Pokémon GO Services</h1>
-      <p>Fast, Reliable, Trusted</p><div id="paypal-container-C7H82TRH7UEYA"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "C7H82TRH7UEYA",
-  }).render("#paypal-container-C7H82TRH7UEYA")
-</script>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="images/pokeball.png" alt="Pokeball Logo">
+      <h1>PogoServices</h1>
     </div>
-    <div class="hero-image">
-      <img src="images/pokeball.png" alt="Pokeball">
-    </div>
+    <nav class="nav-links">
+      <a href="https://wa.me/918521854455" class="whatsapp">WhatsApp</a>
+      <a href="https://discord.gg/c3tSy4aXMq" class="discord">Discord</a>
+      <a href="#paypal-section" class="paypal">PayPal</a>
+    </nav>
   </header>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2 class="animate-fade">Pokémon GO Services</h2>
+      <p class="animate-slide">Fast, Reliable, Trusted</p>
+      <div id="paypal-container-C7H82TRH7UEYA"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "C7H82TRH7UEYA",
+        }).render("#paypal-container-C7H82TRH7UEYA")
+      </script>
+    </div>
+    <div class="hero-image animate-zoom">
+      <img src="images/pokeball.png" alt="Pokeball">
+    </div>
+  </section>
+
+  <!-- Services -->
   <section class="services">
-    <h2>Services & Prices</h2>
+    <h2 class="animate-fade">Services & Prices</h2>
     <div class="cards">
-      <div class="card">
-        <h3>PREMIUM ACCOUNTS </h3>
-        <p>ready to play<br></p>Affordable Pokemon Go Accounts
-        <span>starting from 30$</span><div id="paypal-container-C7H82TRH7UEYA"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "C7H82TRH7UEYA",
-  }).render("#paypal-container-C7H82TRH7UEYA")
-</script>
+      <div class="card animate-up">
+        <h3>PREMIUM ACCOUNTS</h3>
+        <p>Ready to play<br>Affordable Pokémon GO Accounts</p>
+        <span>starting from $30</span>
       </div>
-      <div class="card">
-        <h3>Account Boosting Raids Shiny Catches etc</h3>
-        <p>Level up today<br>
-        <span>book evey evnt services like shundo hundo etc</span>
+      <div class="card animate-up">
+        <h3>Account Boosting</h3>
+        <p>Raids, Shiny Catches, Events</p>
+        <span>Book services like Shundo, Hundo etc.</span>
       </div>
-      <div class="card">
+      <div class="card animate-up">
         <h3>Stardust Farming</h3>
-        <p>1 Millon Stardust</p>
+        <p>1 Million Stardust</p>
         <span>starting from $9.99</span>
       </div>
     </div>
   </section>
+
+  <!-- How it works -->
   <section class="how">
-    <h2>How It Works</h2>
+    <h2 class="animate-fade">How It Works</h2>
     <div class="steps">
-      <div><img src="images/service.png" alt=""><p>Choose Service</p></div>
-      <div><img src="images/contact.png" alt=""><p>Contact</p></div>
-      <div><img src="images/payment.png" alt=""><p>Payment</p></div>
-      <div><img src="images/delivery.png" alt=""><p>Delivery</p></div>
+      <div class="animate-up"><img src="images/service.png" alt=""><p>Choose Service</p></div>
+      <div class="animate-up"><img src="images/contact.png" alt=""><p>Contact</p></div>
+      <div class="animate-up"><img src="images/payment.png" alt=""><p>Payment</p></div>
+      <div class="animate-up"><img src="images/delivery.png" alt=""><p>Delivery</p></div>
     </div>
   </section>
-  
 
-  <section class="contact">
-    <h2>Contact</h2>
+  <!-- Contact -->
+  <section class="contact" id="paypal-section">
+    <h2 class="animate-fade">Quick Contact</h2>
     <div class="buttons">
-      <a href="https://wa.me/918521854455" class="whatsapp">WhatsApp</a>
-      <a href="https://discord.gg/c3tSy4aXMq" class="discord">Discord</a>
-      <a href="#" class="paypal">PayPal</a>
+      <a href="https://wa.me/918521854455" class="whatsapp animate-up">WhatsApp</a>
+      <a href="https://discord.gg/c3tSy4aXMq" class="discord animate-up">Discord</a>
+      <a href="#" class="paypal animate-up">PayPal</a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2024 pogoservices</p>
   </footer>
