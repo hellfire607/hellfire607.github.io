@@ -10,8 +10,18 @@
   <script 
     src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&currency=USD">
   </script>
+
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
+
 </head>
 <body>
+  <header style="display:flex;align-items:center;padding:10px;background:#f8f8f8;">
+    <img src="images/logo.png" alt="PogoServices Logo" style="height:60px;">
+    <h1 style="margin-left:15px;">PogoServices</h1>
+  </header>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">
@@ -23,7 +33,7 @@
       <a href="https://discord.gg/c3tSy4aXMq">Discord</a>
       <a href="#">PayPal</a>
     </nav>
-    <img src="logo.png" alt="PogoServices Logo" style="height:60px;">
+    <img src="images/logo.png" alt="PogoServices Logo" style="height:60px;">
 </header>
 
   <!-- Hero Section -->
@@ -90,9 +100,25 @@
     }).render('#paypal-button-container');
   </script>
 
-<script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&components=hosted-buttons&disable-funding=venmo&currency=USD">
+
+
+
+
+
+<div style="margin:20px 0;">
+  <h2>Support Us</h2>
+  
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "C7H82TRH7UEYA",
+  }).render("#paypal-container-C7H82TRH7UEYA");
 </script>
+
+
+
+
+
+
 
 <div id="paypal-container-C7H82TRH7UEYA"></div>
 <script>
