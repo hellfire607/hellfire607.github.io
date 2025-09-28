@@ -8,31 +8,81 @@
 
   <!-- PayPal SDK -->
   <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&currency=USD&components=buttons,hosted-buttons&disable-funding=venmo">
+    src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&currency=USD&disable-funding=venmo">
   </script>
 
   <style>
-    /* Centering container */
-    .paypal-wrapper {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #f8f8f8;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: #fafafa;
+    }
+    .services {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .cards {
       display: flex;
       justify-content: center;
-      margin: 30px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+    }
+    .payment {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .amount-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f8f8f8;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <header style="display:flex;align-items:center;padding:10px;background:#f8f8f8;">
-    <img src="images/logo.png" alt="PogoServices Logo" style="height:60px;">
-    <h1 style="margin-left:15px;">PogoServices</h1>
-  </header>
-
   <!-- Header -->
-  <header class="header">
+  <header>
     <div class="logo">
-      <img src="images/pokeball.png" alt="Pokeball Logo">
+      <img src="images/pokeball.png" alt="Pokeball Logo" style="height:40px;">
       <span>pogoservices</span>
     </div>
-    <nav class="contact-links">
+    <nav>
       <a href="https://wa.me/918521854455">WhatsApp</a>
       <a href="https://discord.gg/c3tSy4aXMq">Discord</a>
       <a href="#">PayPal</a>
@@ -42,10 +92,8 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Pokémon GO Services</h1>
-      <p>Fast • Reliable • Trusted</p>
-    </div>
+    <h1>Pokémon GO Services</h1>
+    <p>Fast • Reliable • Trusted</p>
   </section>
 
   <!-- Services -->
@@ -73,16 +121,34 @@
   <!-- Payment Section -->
   <section class="payment">
     <h2>Checkout</h2>
-    <div class="paypal-wrapper">
-      <div id="paypal-container"></div>
+
+    <div class="amount-box">
+      <label for="amount">USD</label>
+      <input type="number" id="amount" value="5" style="width:80px;padding:5px;">
+    </div>
+
+    <div style="display:flex;justify-content:center;">
+      <div id="paypal-button-container"></div>
     </div>
   </section>
 
   <!-- PayPal Script -->
   <script>
-    paypal.HostedButtons({
-      hostedButtonId: "C7H82TRH7UEYA"
-    }).render("#paypal-container");
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        const amount = document.getElementById("amount").value || "5";
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: amount }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert("Payment successful, thank you " + details.payer.name.given_name + "!");
+        });
+      }
+    }).render('#paypal-button-container');
   </script>
 
   <!-- Footer -->
