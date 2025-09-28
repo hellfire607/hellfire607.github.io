@@ -2,38 +2,43 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #fff;
+  color: #333;
+  text-align: center;
 }
-h1, h2, h3 {
-  font-weight: bold;
-}
+
 .hero {
-  text-align: center;
   padding: 50px 20px;
-  background: #f4f4f4;
+  background: #f0f0f0;
 }
-.services {
-  padding: 40px 20px;
-  text-align: center;
-}
-.cards {
+
+.contact-buttons {
+  margin-top: 20px;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
-.card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 250px;
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.payment {
-  text-align: center;
-  padding: 30px;
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-footer {
-  background: #f8f8f8;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.discord {
+  background-color: #5865F2;
 }
