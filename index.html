@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>pogoservices - Pokémon GO Services</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Fast, reliable, and trusted Pokémon GO services including premium accounts, boosting, raids, and stardust farming.">
+  <meta name="keywords" content="Pokemon Go, pogoservices, raids, accounts, stardust, pogo, boosting, premium Pokemon Go accounts">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="pogoservices">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="pogoservices - Pokémon GO Services">
+  <meta property="og:description" content="Get Pokémon GO services: premium accounts, raids, boosting, and stardust farming.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/">
+  <meta property="og:image" content="images/logo.png">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- PayPal SDK -->
@@ -75,7 +89,7 @@
   <script>
     paypal.Buttons({
       createOrder: function(data, actions) {
-        const amount = document.getElementById("amount").value || "5";
+        const amount = document.getElementById("amount") ? document.getElementById("amount").value : "5";
         return actions.order.create({
           purchase_units: [{
             amount: { value: amount }
