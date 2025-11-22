@@ -1,65 +1,87 @@
-<section id="quick-checkout" class="quick-checkout-section">
-            <div class="checkout-box">
-                <h2>⚡ Quick Order & Secure Payment</h2>
-                
-                <div class="product-summary">
-                    <h3>1. Select Service & Price:</h3>
-                    <p>This button is for our Standard Pokémon GO Assistance package.</p>
-                    <p class="price-highlight">Price: **$15.00 USD**</p>
-                    <p class="service-details">Includes: 3 hours of dedicated farming, 1 Legendary Raid attempt, or 5 rare candy transfers.</p>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pogoservices - Pokémon GO Services</title>
 
-                <div class="payment-buttons">
-                    <h3>2. Complete Payment via PayPal:</h3>
-                    <div id="paypal-container-C7H82TRH7UEYA"></div>
-                </div>
-                
-                <p class="security-note">
-                    <i class="fa-solid fa-lock"></i> All transactions are processed securely by PayPal. We do not store any financial information.
-                </p>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Fast, reliable, and trusted Pokémon GO services including premium accounts, boosting, raids, and stardust farming.">
+  <meta name="keywords" content="Pokemon Go, pogoservices, raids, accounts, stardust, pogo, boosting, premium Pokemon Go accounts">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="pogoservices">
 
-                <div class="policy-links">
-                    <p>By purchasing, you agree to our:</p>
-                    <a href="terms.html">Terms of Service</a> | 
-                    <a href="refund.html">Refund Policy</a>
-                </div>
-            </div>
-        </section>
-        <section id="testimonials" class="testimonials-section">
-            <h2>What Our Trainers Say</h2>
-            <div class="testimonial-carousel">
-                <div class="testimonial-card">
-                    <p>"Pogo Services helped me finally catch a shiny Rayquaza! Fast and super reliable. Highly recommend!"</p>
-                    <p class="author">- Trainer_Ash87</p>
-                </div>
-                <div class="testimonial-card">
-                    <p>"I couldn't beat that raid boss, but Pogo Services got it done for me. Excellent communication and results!"</p>
-                    <p class="author">- Misty_Fanatic</p>
-                </div>
-                <div class="testimonial-card">
-                    <p>"My account reached level 40 in no time. These guys are the real deal for anyone serious about Pokémon GO."</p>
-                    <p class="author">- Brock_Rockz</p>
-                </div>
-            </div>
-        </section>
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="pogoservices - Pokémon GO Services">
+  <meta property="og:description" content="Get Pokémon GO services: premium accounts, raids, boosting, and stardust farming.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/">
+  <meta property="og:image" content="images/logo.png">
 
-        <section id="cta-bottom" class="cta-bottom-section">
-            <h2>Questions Before Ordering?</h2>
-            <p>Contact us anytime to discuss your specific needs!</p>
-            <a href="#contact" class="hero-button">Contact Us</a>
-        </section>
-    </main>
+  <link rel="stylesheet" href="style.css">
 
-    <footer>
-        <p>&copy; 2024 Pogo Services. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="refund.html">Refund Policy</a></p>
-    </footer>
+  <!-- PayPal SDK -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&currency=USD">
+  </script>
 
-    <script src="https://www.paypalobjects.com/js/external/hosted-buttons.js"></script>
-    <script>
-      paypal.HostedButtons({
-        hostedButtonId: "C7H82TRH7UEYA",
-      }).render("#paypal-container-C7H82TRH7UEYA");
-    </script>
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAftkj4S74wK4a11AqcOrhSyADRWNdtt2Sq4KDySoAYliiGvBv28Dkc2lH4-zHqeXKiKv2ZflnrCdfs8c&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
 
-</body>
-</html>
+</head>
+<body>
+  <header style="display:flex;align-items:center;padding:10px;background:#f8f8f8;">
+    <img src="images/logo.png" alt="PogoServices Logo" style="height:60px;">
+    <h1 style="margin-left:15px;">PogoServices</h1>
+  </header>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/pokeball.png" alt="Pokeball Logo">
+      <span>pogoservices</span>
+    </div>
+    <nav class="contact-links">
+      <a href="https://wa.me/918521854455">WhatsApp</a>
+      <a href="https://discord.gg/c3tSy4aXMq">Discord</a>
+      <a href="#">PayPal</a>
+    </nav>
+    <img src="images/logo.png" alt="PogoServices Logo" style="height:60px;">
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Pokémon GO Services</h1>
+      <p>Fast • Reliable • Trusted</p>
+
+      <!-- Contact Buttons -->
+      <div class="contact-buttons">
+        <a href="https://wa.me/918521854455" class="btn whatsapp">💬 WhatsApp</a>
+        <a href="https://discord.gg/c3tSy4aXMq" class="btn discord">🎮 Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Premium Accounts</h3>
+        <p>Ready to play Pokémon GO accounts.</p>
+        <span>Starting from $30</span>
+      </div>
+      <div class="card">
+        <h3>Boosting & Raids</h3>
+        <p>Level up, shiny catches, raids & more.</p>
+        <span>Book any event services</span>
+      </div>
+      <div class="card">
+        <h3>Stardust Farming</h3>
+        <p>1 Million Stardust</p>
+        <span>Starting from $9.99</span>
+      </div>
+    </div>
+  </section>
